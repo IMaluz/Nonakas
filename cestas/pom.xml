@@ -31,8 +31,8 @@
 				<version>1.9.0</version>
 				<configuration>
 					<schemaVersion>V2</schemaVersion>
-					<resourceGroup>cestas-1663304717754-rg</resourceGroup>
-					<appName>cestas-1663304717754</appName>
+					<resourceGroup>cestas-1666920937278-rg</resourceGroup>
+					<appName>cestas-1666920937278</appName>
 					<pricingTier>P1v2</pricingTier>
 					<region>westeurope</region>
 					<runtime>
