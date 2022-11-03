@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br"
+	  xmlns:th="http://thymeleaf.org"
+	  xmlns:layout="hhtp://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+<title>Editar Cliente</title>
+	<meta charset="utf-8"/>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+	<link rel="stylesheet" href="..\projeto\css\cadastro.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="user">
+		<header class="user__header">
+        	<img src="..\projeto\img\Nonakas-Logo.png" alt="Logo" />
+            <h1 class="user__title">Atualizar Cadastro</h1>
+		</header>
+        <div class="form-container mx-auto text-center">
+        	<form action="#" th:object="${cliente}" th:action="@{/editar-cliente}" th:method="POST" class="form">
+            	<input type="hidden" th:field="*{codigo}">
+	             		<div class="form__group">
+		         			<input type="text" placeholder="Nome" class="form__input" name="nome" th:field="*{nome}"/>
+		   		 		</div>
+                
+                		<div class="form__group">
+                    		<input type="number" placeholder="CPF" class="form__input" name="cpf" th:field="*{cpf}"/>
+                		</div>
+
+                		<div class="form__group">
+                    		<input type="email" placeholder="Email" class="form__input" name="email" th:field="*{email}"/>
+                		</div>
+
+                		<div class="form__group">
+                    		<input type="number" placeholder="Telefone" class="form__input" name="telefone" th:field="*{telefone}"/>
+                		</div>
+                
+                		<div class="form__group">
+                    		<input readonly type="text" class="form__input" name="dataRegistro" th:field="*{dataRegistro}"/>
+                		</div>
+
+                		<button class="btn" type="submit">Salvar</button>
+         		</form>
+			</div>
+			<br>
+			<div class="backward__btn">
+				<a href="../clientes"> <img src="..\projeto\img\back-icon.png" alt="Voltar">
+				VOLTAR
+				</a>
+			</div>
+        </div>
+
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>			
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>
+</html>
