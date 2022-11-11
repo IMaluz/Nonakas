@@ -1,7 +1,10 @@
 package com.nonakas.cestas.controller;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -18,15 +21,21 @@ public class ClienteController {
 	@Autowired
 	private ClienteRepository cr;
 	
+	
 	@RequestMapping(value="/cadastro", method=RequestMethod.GET)
 	public String form() {
 		return "cliente/cadastro";
 	}
 	
 	@RequestMapping(value="/cadastro", method=RequestMethod.POST)
-	public String form(Cliente cliente) {
+	public String form(@Valid Cliente cliente, BindingResult result) {
+		if(result.hasErrors()) {
+			return "/cadastro";
+		}
+		else {
 		cliente.setDataRegistro(Data.getDateTime());
 		cr.save(cliente);
+		}
 		
 		return "redirect:/cadastro";
 	}
@@ -53,10 +62,13 @@ public class ClienteController {
 	}
 	
 	@RequestMapping(value="/editar-cliente", method=RequestMethod.POST)
-	public String edit(Cliente cliente) {
-		
+	public String edit(@Valid Cliente cliente, BindingResult result) {
+		if(result.hasErrors()) {
+			return "/clientes";
+		}
+		else {
 		cr.save(cliente);
-		
+		}
 		return "redirect:/clientes";
 	}
 }

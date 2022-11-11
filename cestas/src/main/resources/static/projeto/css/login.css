@@ -127,18 +127,8 @@ img{
     margin-top: -3px;
 }
 
-.contact a{
-  text-decoration: none;
-  color: #fff;
-}
 
-.top_link a{
-  text-decoration: none;
-}
-.top_link img{
-  width: 20px;
-  height: 20px;
-}
+
 
 
 /*
@@ -152,4 +142,3 @@ img{
       line-height: 30px;
       height: 30px;
 }
-*/

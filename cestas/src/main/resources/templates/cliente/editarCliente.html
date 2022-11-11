@@ -13,31 +13,42 @@
 	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
+	 <nav class="navbar navbar-light bg-light">
+		<a class="navbar-brand" href="/"> <img
+			src="..\projeto\img\Nonakas-Logo.png" width="30" height="30"
+			class="d-inline-block align-top" alt=""> Nonaka's
+		</a>
+	</nav>
 	<div class="user">
 		<header class="user__header">
         	<img src="..\projeto\img\Nonakas-Logo.png" alt="Logo" />
             <h1 class="user__title">Atualizar Cadastro</h1>
 		</header>
-        <div class="form-container mx-auto text-center">
+        <div>
         	<form action="#" th:object="${cliente}" th:action="@{/editar-cliente}" th:method="POST" class="form">
             	<input type="hidden" th:field="*{codigo}">
 	             		<div class="form__group">
+	             			<label class="label" for="nome"> Nome: </label>
 		         			<input type="text" placeholder="Nome" class="form__input" name="nome" th:field="*{nome}"/>
 		   		 		</div>
                 
                 		<div class="form__group">
-                    		<input type="text" placeholder="CPF" class="form__input" name="cpf" th:field="*{cpf}"/>
+                			<label class="label" for="cpf"> CPF: </label>
+                    		<input type="number" placeholder="CPF" class="form__input" name="cpf" th:field="*{cpf}"/>
                 		</div>
 
                 		<div class="form__group">
+                			<label class="label" for="email"> E-mail: </label>
                     		<input type="email" placeholder="Email" class="form__input" name="email" th:field="*{email}"/>
                 		</div>
 
                 		<div class="form__group">
-                    		<input type="text" placeholder="Telefone" class="form__input" name="telefone" th:field="*{telefone}"/>
+                			<label class="label" for="telefone"> Telefone: </label>
+                    		<input type="number" placeholder="Telefone" class="form__input" name="telefone" th:field="*{telefone}"/>
                 		</div>
                 
                 		<div class="form__group">
+                			<label class="label" for="dataRegistro"> Data de Registro: </label>
                     		<input readonly type="text" class="form__input" name="dataRegistro" th:field="*{dataRegistro}"/>
                 		</div>
 

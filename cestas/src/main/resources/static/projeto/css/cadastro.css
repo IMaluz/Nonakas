@@ -78,6 +78,7 @@ body {
     text-weight: 700;
     background: #ECFDFF;
     transition: 0.3s;
+    margin-top: 26px;
 }
 
 .backward__btn{
@@ -145,4 +146,13 @@ body {
     100% {
         background-position: 0 0
     }
+}
+
+.label {
+	font-size: 14px;
+	margin-top: 10px;
+    color: #6a6a6a;
+}
+.h1 {
+	text-align: center;
 }
