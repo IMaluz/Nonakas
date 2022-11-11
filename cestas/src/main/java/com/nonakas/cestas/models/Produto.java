@@ -9,7 +9,7 @@ import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
 
 @Entity
-public class Cliente implements Serializable {
+public class Produto implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	
@@ -18,15 +18,16 @@ public class Cliente implements Serializable {
 	private long codigo;
 	
 	@NotBlank
-	private String nome;
+	private String produto;
 	@NotBlank
-	public String cpf;
+	public String precoVenda;
 	@NotBlank
-	private String email;
+	private String categoria;
 	@NotBlank
-	private String telefone;
-	@NotBlank
+	private String quantidade;
+
 	private String dataRegistro;
+	
 	
 	
 	public long getCodigo() {
@@ -35,29 +36,23 @@ public class Cliente implements Serializable {
 	public void setCodigo(long codigo) {
 		this.codigo = codigo;
 	}
-	public String getNome() {
-		return nome;
+	public String getProduto() {
+		return produto;
 	}
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setProduto(String produto) {
+		this.produto = produto;
 	}
-	public String getCpf() {
-		return cpf;
+	public String getPrecoVenda() {
+		return precoVenda;
 	}
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
+	public void setPrecoVenda(String precoVenda) {
+		this.precoVenda = precoVenda;
 	}
-	public String getEmail() {
-		return email;
+	public String getCategoria() {
+		return categoria;
 	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public String getTelefone() {
-		return telefone;
-	}
-	public void setTelefone(String telefone) {
-		this.telefone = telefone;
+	public void setCategoria(String categoria) {
+		this.categoria = categoria;
 	}
 	public String getDataRegistro() {
 		return dataRegistro;
@@ -65,5 +60,15 @@ public class Cliente implements Serializable {
 	public void setDataRegistro(String dataRegistro) {
 		this.dataRegistro = dataRegistro;
 	}
+	public static long getSerialversionuid() {
+		return serialVersionUID;
+	}
+	public String getQuantidade() {
+		return quantidade;
+	}
+	public void setQuantidade(String quantidade) {
+		this.quantidade = quantidade;
+	}
+	
 	
 }

@@ -23,7 +23,7 @@
 	</nav>
 	<div class="container" id="home1">
 		<section class="section" id="home">
-			<h1>Lista de Clientes</h1>
+			<h1 class="h1">Lista de Clientes</h1>
 			<div class="table-responsive">
 			<table class="table">
 			  	<thead class="table table-hover">
@@ -39,7 +39,7 @@
 				</thead>
   				<tbody>
 	  				<tr th:each="cliente : ${clientes}">	
-					<td><a th:href="@{/{codigo}(codigo = ${cliente.codigo}) }"><span th:text ="${cliente.nome}"></span></a></td>
+					<td><a th:href="@{/compra/{codigo}(codigo = ${cliente.codigo})}"><span th:text ="${cliente.nome}"></span></a></td>
 					<td><span th:text ="${cliente.cpf}"></span></td>
 					<td><span th:text ="${cliente.email}"></span></td>
 					<td><span th:text ="${cliente.telefone}"></span></td>

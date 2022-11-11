@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Personalize sua Cesta</title>
+    <link rel="stylesheet" href="..\projeto\css\compra.css"/>
+</head>
+<body>
+    <!-- modelos de produtos na lista e na cesta -->
+    <div class="models">
+
+        <!-- produto na lista -->
+        <div class="produto-item">
+            <a href="/compra">
+                <div class="produto-item--img"><img src=""/></div>
+                <div class="produto-item--add">+</div>
+            </a>
+            <div class="produto-item--price">R$--</div>
+            <div class="produto-item--name">--</div>
+            <div class="produto-item--desc">--</div>
+        </div>
+
+        <!-- produto no carrinho -->
+        <div class="cart--item">
+            <img src="" />
+            <div class="cart--item-nome">--</div>
+            <div class="cart--item--qtarea">
+                <button class="cart--item-qtmenos">-</button>
+                <div class="cart--item--qt">1</div>
+                <button class="cart--item-qtmais">+</button>
+            </div>
+        </div>
+
+    </div>
+    <!-- /models -->
+
+    <!-- .menu-openner aparecera no modo mobile -->
+    <header>
+        <nav class="navbar navbar-light bg-light">
+		<a class="navbar-brand" href="/"> <img
+			src="projeto\img\Nonakas-Logo.png" width="30" height="30"
+			class="d-inline-block align-top" alt=""> Nonaka's
+		</a>
+	</nav>
+        <div class="menu-openner"><span>0</span>🛒</div>
+    </header>
+    <!-- /menu-openner -->
+
+    <!-- conteudo principal -->
+    <main>
+        
+        <h2>Selecione os Produtos</h2>
+
+        <div class="produto-area"></div>
+    </main>
+    <!-- /conteudo principal -->
+
+    <!-- aside do carrinho -->
+    <aside>
+        <div class="cart--area">
+            <div class="menu-closer">❌</div>
+            <h1>Sua Cesta</h1>
+            <div class="cart"></div>
+            <div class="cart--details">
+                <div class="cart--totalitem subtotal">
+                    <span>Subtotal</span>
+                    <span>R$ --</span>
+                </div>
+                <div class="cart--totalitem desconto">
+                    <span>Desconto</span>
+                    <span>R$ --</span>
+                </div>
+                <div class="cart--totalitem total big">
+                    <span>Total</span>
+                    <span>R$ --</span>
+                </div>
+                <div class="cart--finalizar">Finalizar a compra</div>
+            </div>
+        </div>
+    </aside>
+    <!-- /aside do carrinho -->
+
+    <!-- janela modal .produtoWindowArea -->
+    <div class="produtoWindowArea">
+        <div class="produtoWindowBody">
+            <div class="produtoInfo--cancelMobileButton">Voltar</div>
+            <div class="produtoBig">
+                <img src="" />
+            </div>
+            <div class="produtoInfo">
+                <h1>--</h1>
+                <div class="produtoInfo--desc">--</div>
+                
+                <div class="produtoInfo--pricearea">
+                    <div class="produtoInfo--sector">Preço</div>
+                    <div class="produtoInfo--price">
+                        <div class="produtoInfo--actualPrice">R$ --</div>
+                        <div class="produtoInfo--qtarea">
+                            <button class="produtoInfo--qtmenos">-</button>
+                            <div class="produtoInfo--qt">1</div>
+                            <button class="produtoInfo--qtmais">+</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="produtoInfo--addButton">Adicionar à Cesta</div>
+                <div class="produtoInfo--cancelButton">Cancelar</div>
+            </div>
+        </div>
+    </div>
+    <!-- /janela modal .produtoWindowArea -->
+
+    <script src="..\projeto\js\produtos.js"></script>
+    <script src="..\projeto\js\script.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

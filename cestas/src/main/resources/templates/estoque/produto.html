@@ -1,0 +1,70 @@
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="images/favicon.png" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Cadastrar Produtos Nonaka's</title>
+    <link rel="stylesheet" href="..\projeto\css\cadastro.css"/>
+</head>
+<body>
+<header>
+        <nav class="navbar navbar-light bg-light">
+		<a class="navbar-brand" href="/"> <img
+			src="projeto\img\Nonakas-Logo.png" width="30" height="30"
+			class="d-inline-block align-top" alt=""> Nonaka's
+		</a>
+		</nav>
+</header>
+<div>
+        <div class="user">
+            <header class="user__header">
+                <img src="projeto\img\Nonakas-Logo.png" alt="Logo" />
+                <h1 class="user__title">CADASTRAR NOVO PRODUTO</h1>
+            </header>
+            
+            
+            <form method="post" class="form">
+                <div class="form__group">
+                	<label class="label" for="produto"> Produto: </label>
+                    <input type="text" placeholder="Produto" class="form__input" id="produto" name="produto"/>
+                </div>
+                
+                <div class="form__group">
+                	<label class="label" for="precoVenda"> Preço de Venda:</label>
+                    <input type="text" placeholder="Preço de Venda" class="form__input" id="precoVenda" name="precoVenda"/>
+                    
+                </div>
+                
+                <div class="form__group">
+                	<label class="label" for="quantidade"> Quantidade:</label>
+                    <input type="text" placeholder="Quantidade" class="form__input" id="quantidade" name="quantidade"/>
+                    
+                </div>
+                
+                <div class="form__group">
+                	<label class="label" for="categoria"> Categoria:</label>
+                    <select name="categoria" id="categoria"> 
+                    	<option value="cafe">Café da Manhã</option>
+                    	<option value="doces">Doces</option>
+                    	<option value="bebidaPetisco">Bebidas & Petiscos</option>
+                    	<option value="piquenique">Piquenique</option>
+                    </select>
+                </div>
+                
+                <button class="btn" type="submit">CADASTRAR</button>
+            </form>
+        </div>
+            <div class="backward__btn">
+                <a href="/">
+                    <img src="projeto\img\back-icon.png" alt="Voltar">
+               VOLTAR
+                </a>
+            </div>
+        </div>
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.1.1.min.js"></script>			<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -10,28 +10,41 @@
 		<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     </head>
     <body>
+    <nav class="navbar navbar-light bg-light">
+		<a class="navbar-brand" href="/"> <img
+			src="projeto\img\Nonakas-Logo.png" width="30" height="30"
+			class="d-inline-block align-top" alt=""> Nonaka's
+		</a>
+	</nav>
         <div>
         <div class="user">
             <header class="user__header">
                 <img src="projeto\img\Nonakas-Logo.png" alt="Logo" />
                 <h1 class="user__title">CADASTRAR NOVO CLIENTE</h1>
             </header>
-
+            
+            
             <form method="post" class="form">
                 <div class="form__group">
-                    <input type="text" placeholder="Nome" class="form__input" name="nome"/>
+                	<label class="label" for="nome"> Nome: </label>
+                    <input type="text" placeholder="Nome" maxlength="40" class="form__input" id="nome" name="nome"/>
                 </div>
                 
                 <div class="form__group">
-                    <input type="text" placeholder="CPF" class="form__input" name="cpf"/>
+                	<label class="label" for="cpf"> CPF:</label>
+                    <input type="number" placeholder="CPF (Somente números)" size="11" maxlength="11" class="form__input" id="cpf" name="cpf"/>
+                    
                 </div>
 
                 <div class="form__group">
-                    <input type="email" placeholder="Email" class="form__input" name="email"/>
+                	<label class="label" for="email"> E-mail:</label>
+                    <input type="email" placeholder="Email" class="form__input" id="email" name="email" maxlength="40"/>
                 </div>
 
                 <div class="form__group">
-                    <input type="text" placeholder="Telefone" class="form__input" name="telefone"/>
+                	<label class="label" for="telefone"> Telefone:</label>
+                    <input type="number" id="telefone" placeholder="Telefone (Somente números com DDD)" size="10" maxlength="13" class="form__input" name="telefone"/>
+                   
                 </div>
 
                 <button class="btn" type="submit">CADASTRAR</button>
@@ -45,6 +58,5 @@
             </div>
         </div>
         
-       <!--<script src="projeto\js\register-script.js"></script>-->
     </body>
 </html>
